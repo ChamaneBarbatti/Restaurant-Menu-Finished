@@ -19,8 +19,8 @@ namespace Restaurant_Menu_Studio
             Category = category;
             IsNew = isNew;
 
-
-            public string IsItemNew()
+        }
+            public string IsItemNew() 
             {
                 if (IsNew)
                 {
@@ -32,33 +32,12 @@ namespace Restaurant_Menu_Studio
 
                 }
             }
-        }
 
 
-        public override bool Equals(object comparison)
 
-        {
-            if (comparison == this)
-            {
-                return true;
-            }
-            if (comparison == null)
-            {
-                return false;
-            }
-            if (comparison.GetType() != comparison.GetType())
-            {
-                return false;
-            }
-            MenuItem theItem = comparison as MenuItem;
-            return theItem.Description == Description;
+
+
+
 
         }
-        public override int GetHashCode()
-        {
-            return HashCode.Combine(Description);
-        }
-
-
-    }
     }
